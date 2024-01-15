@@ -5,8 +5,7 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from 'react-router-dom';
-import Root from './root/Root';
-import './App.css';
+import Root from './containers/Root';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
