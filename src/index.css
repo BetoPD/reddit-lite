@@ -11,9 +11,6 @@ body {
     'header header header'
     'main main aside';
 }
-* {
-  border: 1px solid blue;
-}
 
 header {
   display: flex;

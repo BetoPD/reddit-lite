@@ -25,7 +25,7 @@ export default function Home() {
     } else {
       setFilteredPosts(posts);
     }
-  });
+  }, [posts, searchTerm]);
 
   if (isLoading) {
     return (
