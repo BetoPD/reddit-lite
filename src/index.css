@@ -3,10 +3,38 @@ body {
   padding: 0;
 }
 
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    'header header'
+    'main aside';
+}
+
+* {
+  border: 1px solid blue;
+}
+
 header {
-  color: var(--color-branding);
-  background: var(--color-foreground);
-  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 64px;
-  padding: 0 var(--spacing-5);
+  grid-area: header;
+  width: 100%;
+}
+
+header form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
 }

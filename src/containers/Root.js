@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import NavBar from './NavBar';
+import SubReddits from './SubReddits';
 
 export default function Root() {
   return (
@@ -9,7 +10,7 @@ export default function Root() {
         <Outlet />
       </main>
       <aside>
-        <h1>Something</h1>
+        <SubReddits />
       </aside>
     </>
   );

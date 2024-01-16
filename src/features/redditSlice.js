@@ -23,8 +23,7 @@ export const getComments = createAsyncThunk(
 const redditSlice = createSlice({
   name: 'reddit',
   initialState: {
-    subreddit: '/home',
-    searchTerm: '',
+    subreddit: 'r/home',
     posts: [],
     isLoadingSubreddits: false,
     hasErrorSubreddits: false,
@@ -34,9 +33,6 @@ const redditSlice = createSlice({
   reducers: {
     setSubreddit: (state, action) => {
       state.subreddit = action.payload;
-    },
-    setSearchTerm: (state, action) => {
-      state.searchTerm = action.payload;
     },
   },
   extraReducers: {
@@ -73,4 +69,4 @@ const redditSlice = createSlice({
 
 export default redditSlice.reducer;
 
-export const { setSubreddit, setSearchTerm } = redditSlice.actions;
+export const { setSubreddit } = redditSlice.actions;
