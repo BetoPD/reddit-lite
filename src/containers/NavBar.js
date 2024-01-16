@@ -11,7 +11,10 @@ export default function NavBar() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (localSearchTerm.length === 0) return;
+    if (localSearchTerm.length === 0) {
+      navigate('/');
+      return;
+    }
 
     setLocalSearchTerm('');
 
@@ -25,7 +28,7 @@ export default function NavBar() {
 
   return (
     <header>
-      <div className="logo">
+      <div className="logo" onClick={() => navigate('/')}>
         <FaReddit color="red" />
       </div>
       <form onSubmit={handleSubmit}>

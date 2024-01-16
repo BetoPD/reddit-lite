@@ -4,12 +4,14 @@ import { useEffect } from 'react';
 import { setSubreddit } from '../features/redditSlice';
 import SubReddit from '../components/SubReddit';
 import '../styles/SubReddit.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function SubReddits() {
   const dispatch = useDispatch();
   const subReddits = useSelector((state) => state.subReddit.subReddits);
   const isLoading = useSelector((state) => state.subReddit.isLoading);
   const currentSubReddit = useSelector((state) => state.reddit.subreddit);
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(setSubreddits());
@@ -17,6 +19,7 @@ export default function SubReddits() {
 
   const handleSubredditClick = (subReddit) => {
     dispatch(setSubreddit(subReddit));
+    navigate('/');
   };
 
   return (

@@ -6,12 +6,11 @@ body {
 #root {
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-areas:
-    'header header'
-    'main aside';
+    'header header header'
+    'main main aside';
 }
-
 * {
   border: 1px solid blue;
 }
@@ -22,13 +21,19 @@ header {
   align-items: center;
   height: 64px;
   grid-area: header;
-  width: 100%;
+  background-color: whitesmoke;
+  border: 1px solid fuchsia;
+  margin: 5px 5px;
 }
 
 header form {
   flex: 1;
   display: flex;
   justify-content: center;
+}
+
+.logo {
+  margin-left: 10px;
 }
 
 main {
