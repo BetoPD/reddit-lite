@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { FaReddit, FaSearch } from 'react-icons/fa';
 import { createSearchParams, useNavigate } from 'react-router-dom';
 
 export default function NavBar() {
   const [localSearchTerm, setLocalSearchTerm] = useState('');
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
