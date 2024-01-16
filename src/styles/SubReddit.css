@@ -17,9 +17,12 @@ button.subreddit-button {
 button.subreddit-button:hover {
   background-color: #c0c0c0;
 }
-
 button.subreddit-button:active {
   font-weight: bold;
+}
+
+button.subreddit-button-active {
+  background-color: rgb(181, 169, 169) !important;
 }
 
 .subreddit-container h1 {

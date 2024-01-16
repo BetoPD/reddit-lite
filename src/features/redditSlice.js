@@ -3,7 +3,7 @@ import { getPostComments, getSubredditsPosts } from '../api/reddit';
 
 export const getPosts = createAsyncThunk(
   'reddit/setPosts',
-  async ({ subreddit }) => {
+  async (subreddit) => {
     const posts = await getSubredditsPosts(subreddit);
     return posts;
   }
@@ -23,7 +23,7 @@ export const getComments = createAsyncThunk(
 const redditSlice = createSlice({
   name: 'reddit',
   initialState: {
-    subreddit: 'r/home',
+    subreddit: '/r/Home/',
     posts: [],
     isLoadingSubreddits: false,
     hasErrorSubreddits: false,

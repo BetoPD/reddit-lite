@@ -6,9 +6,15 @@ export default function SubReddit({
   subReddit,
   handleClick,
   color,
+  active,
 }) {
   return (
-    <button onClick={() => handleClick(subReddit)} className="subreddit-button">
+    <button
+      onClick={() => handleClick(subReddit)}
+      className={
+        active ? 'subreddit-button subreddit-button-active' : 'subreddit-button'
+      }
+    >
       <img
         src={icon}
         alt={subReddit}

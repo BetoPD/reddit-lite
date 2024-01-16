@@ -1,6 +1,6 @@
 const apiEnpoint = 'https://www.reddit.com';
 
-const getSubreddits = async () => {
+export const getSubreddits = async () => {
   try {
     const response = await fetch(apiEnpoint + '/subreddits.json');
     if (response.ok) {
@@ -14,7 +14,7 @@ const getSubreddits = async () => {
   }
 };
 
-const getSubredditsPosts = async (subreddit) => {
+export const getSubredditsPosts = async (subreddit) => {
   try {
     const response = await fetch(apiEnpoint + subreddit + '.json');
     if (response.ok) {
@@ -28,7 +28,7 @@ const getSubredditsPosts = async (subreddit) => {
   }
 };
 
-const getPostComments = async (permaLink) => {
+export const getPostComments = async (permaLink) => {
   try {
     const response = await fetch(apiEnpoint + permaLink + '.json');
     if (response.ok) {
@@ -39,5 +39,3 @@ const getPostComments = async (permaLink) => {
     }
   } catch (error) {}
 };
-
-export { getSubreddits, getSubredditsPosts, getPostComments };

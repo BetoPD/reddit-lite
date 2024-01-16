@@ -8,6 +8,8 @@ import '../styles/SubReddit.css';
 export default function SubReddits() {
   const dispatch = useDispatch();
   const subReddits = useSelector((state) => state.subReddit.subReddits);
+  const isLoading = useSelector((state) => state.subReddit.isLoading);
+  const currentSubReddit = useSelector((state) => state.reddit.subreddit);
 
   useEffect(() => {
     dispatch(setSubreddits());
@@ -20,7 +22,7 @@ export default function SubReddits() {
   return (
     <div className="subreddit-container">
       <h1>Subreddits</h1>
-      {subReddits &&
+      {!isLoading &&
         subReddits.map((subReddit) => {
           const { icon_img, display_name, url, id, primary_color } = subReddit;
           return (
@@ -29,6 +31,7 @@ export default function SubReddits() {
               name={display_name}
               subReddit={url}
               handleClick={handleSubredditClick}
+              active={currentSubReddit === url}
               color={primary_color}
               key={id}
             />
