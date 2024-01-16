@@ -1,0 +1,15 @@
+.comment-container {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  margin: 10px 10px;
+  border-radius: 5px;
+}
+
+.comment-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}

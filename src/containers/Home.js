@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getPosts } from '../features/redditSlice';
+import { getComments, getPosts } from '../features/redditSlice';
 import { useSearchParams } from 'react-router-dom';
 import Post from '../components/Post';
 import moment from 'moment';
@@ -27,6 +27,15 @@ export default function Home() {
     }
   }, [posts, searchTerm]);
 
+  const showComments = (permalink, id) => {
+    dispatch(
+      getComments({
+        permalink: permalink,
+        id: id,
+      })
+    );
+  };
+
   if (isLoading) {
     return (
       <div>
@@ -36,18 +45,29 @@ export default function Home() {
   }
 
   return filteredPosts.map((post) => {
-    const { title, url, subreddit_id, author, num_comments, created_utc } =
-      post;
+    const {
+      title,
+      url,
+      id,
+      author,
+      num_comments,
+      created_utc,
+      permalink,
+      comments,
+    } = post;
 
     return (
-      <article>
+      <article key={id}>
         <Post
           title={title}
           image={url}
-          key={subreddit_id}
           author={author}
           commentNum={num_comments}
           dateCreated={moment.unix(created_utc).fromNow()}
+          permalink={permalink}
+          comments={comments}
+          id={id}
+          getComments={showComments}
         />
       </article>
     );

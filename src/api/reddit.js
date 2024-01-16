@@ -37,5 +37,7 @@ export const getPostComments = async (permaLink) => {
     } else {
       throw new Error('Unable to fetch Posts');
     }
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 };
