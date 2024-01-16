@@ -1,46 +1,39 @@
-# Getting Started with Create React App and Redux
+# Project Name
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+## Description
 
-## Available Scripts
+This project is a reddit clone, built with react, react-redux and react-router, it uses the the reddit json API.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- Installation
+- Usage
+- Technologies Used
+- URL
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Instructions on how to install and set up the project locally.
 
-### `npm test`
+1. Clone the repository: `git clone <repository-url>`
+2. Install dependencies: `npm install`
+3. Configure environment variables: Create a `.env` file and add any necessary configuration variables.
+4. Start the development server: `npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+To properly use this project, you have to have Node.js downloaded in your computer, then clone this repo and execute, "npm install", this is going to download all the dependencies this project uses.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+List of technologies, frameworks, and libraries used in the project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- Node.js
+- Redux
+- React Router
+- Reddit JSON API
 
-### `npm run eject`
+## URL
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://reddit-lite-by-silver.netlify.app/
