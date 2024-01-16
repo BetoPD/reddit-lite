@@ -27,7 +27,7 @@ export default function NavBar() {
   return (
     <header>
       <div className="logo" onClick={() => navigate('/')}>
-        <FaReddit color="red" />
+        <FaReddit color="red" size="30px" />
       </div>
       <form onSubmit={handleSubmit}>
         <input
