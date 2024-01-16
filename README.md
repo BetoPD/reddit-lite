@@ -15,7 +15,7 @@ This project is a reddit clone, built with react, react-redux and react-router, 
 
 Instructions on how to install and set up the project locally.
 
-1. Clone the repository: `git clone <repository-url>`
+1. Clone the repository: `git clone https://github.com/BetoPD/reddit-lite.git`
 2. Install dependencies: `npm install`
 3. Configure environment variables: Create a `.env` file and add any necessary configuration variables.
 4. Start the development server: `npm start`
